@@ -1,0 +1,106 @@
+
+*,*::after,*::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./TIc Tac Toe/assets/gradient-bg.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.content{
+
+    /* background-size: cover;
+    background-position: center; */
+    display: grid;
+    place-items: center;
+
+}
+
+.player-title{
+    display: flex ;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.grid{
+    width:90%;
+    max-width:20rem ;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    aspect-ratio: 1/1;
+    display: grid;  
+    grid-template-columns: repeat(3,1fr);
+    transform:translateY(45%);
+  
+}
+
+.box{
+    cursor: pointer;
+    height : 90px ;
+    /* border: solid 1px rgba(255, 255, 255); */
+     font-size: 3rem;
+    color :white ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1, .box2, .box4, .box5{
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+.box3, .box6{
+    border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+    border-right:2px solid white;
+}
+
+
+.player-title{
+    color:white;
+    position:absolute;
+    top:3rem;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    /* text-align:center; */
+}
+
+.btn{
+    color:white;
+    position: absolute;
+    bottom:3rem;
+    left:50%;
+    transform:translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    cursor:pointer;
+    display: none;
+}
+
+
+.active {
+    display: flex;  
+}
+
+.win{
+    background-color: green;
+}
